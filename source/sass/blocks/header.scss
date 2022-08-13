@@ -1,0 +1,63 @@
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+.header__title {
+	font-family: $secondary-font;
+	font-size: 32px;
+	line-height: 32px;
+	margin: 0;
+	padding: 20px;
+}
+
+.header__form {
+	position: relative;
+	margin: 0;
+}
+
+.header__input {
+	width: 100%;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 11px 60px 11px 20px;
+	border: none;
+	outline: none;
+}
+
+.header__search {
+	display: flex;
+	padding: 0;
+	border: none;
+	background-color: $transparent;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+}
+
+.header__controls-list {
+	@include reset-list;
+	display: flex;
+}
+
+.header__controls-item {
+	width: 50%;
+}
+
+.header__controls-button {
+	@include h4;
+	font-size: 14px;
+	font-weight: $semibold;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid $transparent;
+	background-color: $transparent;
+	padding: 11px 10px 15px 10px;
+	cursor: pointer;
+
+	&--active {
+		cursor: auto;
+	}
+}

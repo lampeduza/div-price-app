@@ -1,0 +1,123 @@
+.settings__main {
+	height: 424px;
+}
+
+.settings__container {
+	padding: 27px 20px 22px 20px;
+}
+
+.settings__create-container {
+	min-height: 396px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.settings__language-panel {
+	display: flex;
+	align-items: center;
+	margin: 0 0 30px 0;
+}
+
+.settings__language-label {
+	@include h4;
+	font-size: 14px;
+	margin: 0 30px 0 0;
+}
+
+.settings__content {
+	position: relative;
+}
+
+.settings__language-current {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 200px;
+	padding: 11px 23.33px 11px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.settings__language-list {
+	@include reset-list;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	display: none;
+	width: 100%;
+	z-index: 1;
+
+	&--opened {
+		display: block;
+	}
+}
+
+.settings__language-item {
+	padding: 11px 20px 11px 20px;
+
+	&--current {
+		font-weight: 600;
+	}
+}
+
+.settings__extention {
+	margin: 0 0 30px 0;
+}
+
+.settings__notifications {
+	margin: 0 0 30px 0;
+}
+
+.settings__extention-list,
+.settings__notifications-list {
+	@include reset-list;
+}
+
+.settings__extention-item,
+.settings__notifications-item {
+	margin: 0 0 20px 0;
+}
+
+.settings__extention-title,
+.settings__notifications-title,
+.settings__scheme-title {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: $regular;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+}
+
+.settings__extention-label,
+.settings__notifications-label {
+	display: block;
+	padding: 0 0 0 26px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.settings__notify {
+	@include h4;
+	font-size: 14px;
+	margin: -68px 0 33px 0;
+	padding: 0 42px;
+	text-align: center;
+}
+
+.settings__create {
+	@include h3;
+	font-size: 16px;
+	padding: 10px 20px;
+	margin: 0 0 20px 0;
+	color: inherit;
+	border-radius: 4px;
+}
+
+.settings__sign-in {
+	font-size: 14px;
+	line-height: 20px;
+}

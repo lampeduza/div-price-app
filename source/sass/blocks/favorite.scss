@@ -1,0 +1,131 @@
+.favorite__filter {
+	padding: 18px 22px;
+	border-bottom: 1px solid #000000;
+	position: relative;
+	z-index: 9;
+}
+
+.favorite__filter-list {
+	@include reset-list;
+	display: flex;
+}
+
+.favorite__filter-item {
+	margin: 0 20px 0 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.favorite__filter-button {
+	display: flex;
+	align-items: center;
+	font-family: "Proxyma Nova";
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0;
+	background-color: $transparent;
+	border: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.favorite__filter-icon {
+	margin-left: 13.33px;
+}
+
+.favorite__main {
+	height: 430px;
+	overflow: hidden;
+}
+
+.favorite__main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	min-height: 363px;
+	text-align: center;
+}
+
+.favorite__main-title {
+	@include h1;
+	font-size: 20px;
+	margin: -35px 0 20px 0;
+	padding: 0 116px;
+}
+.favorite__main-text {
+	@include h4;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 116px;
+}
+
+.favorite__present-list {
+	@include reset-list;
+}
+
+.favorite__present-item {
+	padding: 17px 20px 20px 20px;
+	border-bottom: 1px solid $black-color;
+	position: relative;
+}
+
+.favorite__present-top {
+	display: flex;
+	margin: 0 0 10px 0;
+}
+
+.favorite__present-title {
+	width: max-content;
+	@include h2;
+	font-size: 18px;
+	margin: 0 0 6px 0;
+	position: relative;
+}
+
+.favorite__present-text {
+	@include h4;
+	font-size: 14px;
+	margin: 0 0 5px 0;
+}
+
+.favorite__present-text-new {
+	@include h4;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 0 6px 0 0;
+}
+
+.favorite__present-stats {
+	@include h4;
+	font-size: 14px;
+	display: inline-block;
+	margin: 0;
+	border-radius: 46px;
+	user-select: none;
+
+	&--dropped,
+	&--rise {
+		position: relative;
+		padding: 0 18px 0 7px;
+
+		.favorite__present-icon {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 2px;
+		}
+	}
+
+	&--unchanged {
+		padding: 0;
+	}
+}
+
+.favorite__present-picture {
+	margin: 0 15px 0 0;
+}

@@ -1,0 +1,45 @@
+.by-months {
+	display: none;
+	position: absolute;
+	top: 45px;
+	left: 147.5px;
+	z-index: 10;
+
+	&--opened {
+		display: block;
+	}
+}
+
+.by-months__list {
+	@include reset-list;
+	position: relative;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		transform: rotate(45deg);
+		z-index: -1;
+	}
+}
+
+.by-months__link {
+	color: inherit;
+}
+
+.by-months__title {
+	@include h4;
+	font-size: 14px;
+	padding: 10px 10px 10px 36px;
+	margin: 0;
+	position: relative;
+
+	&--title {
+		font-weight: $semibold;
+	}
+}

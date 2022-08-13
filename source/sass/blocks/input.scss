@@ -1,0 +1,12 @@
+.input {
+	&:checked {
+		~ .label {
+			&::after {
+				width: 9px;
+				height: 7px;
+				top: 6px;
+				left: 6px;
+			}
+		}
+	}
+}

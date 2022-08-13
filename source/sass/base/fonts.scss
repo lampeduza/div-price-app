@@ -1,0 +1,43 @@
+/* Proxima Nova regular (normal)*/
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  //font-display: optional;
+  src: url("../fonts/regular.woff2") format("woff2"),
+    url("../fonts/regular.woff") format("woff");
+}
+
+/* Proxima Nova bold (normal)*/
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  //font-display: optional;
+  src: url("../fonts/bold.woff2") format("woff2"),
+    url("../fonts/bold.woff") format("woff");
+}
+
+/* Proxima Nova semibold (normal)*/
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  //font-display: optional;
+  src: url("../fonts/semibold.woff2") format("woff2"),
+    url("../fonts/semibold.woff") format("woff");
+}
+
+/* Anonymous pro regular (normal)*/
+@font-face {
+  font-family: "Anonymous Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  //font-display: optional;
+  src: url("../fonts/anonymous-pro-regular.woff2") format("woff2"),
+    url("../fonts/anonymous-pro-regular.woff") format("woff");
+}

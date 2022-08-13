@@ -1,0 +1,83 @@
+.all-stores {
+	display: none;
+	position: absolute;
+	top: 45px;
+	z-index: 10;
+	// min-width: 166px;
+
+	&--opened {
+		display: block;
+	}
+}
+
+.all-stores__list {
+	@include reset-list;
+	position: relative;
+	z-index: 1;
+	min-width: 165px;
+
+	&::after {
+		content: '';
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		transform: rotate(45deg);
+		z-index: -1;
+	}
+}
+
+.all-stores__link {
+	color: inherit;
+}
+
+.all-stores__title {
+	@include h4;
+	font-size: 14px;
+	padding: 10px 10px 10px 36px;
+	margin: 0;
+	position: relative;
+
+	&--title {
+		display: flex;
+		align-items: center;
+		font-weight: $semibold;
+		padding: 10px 0;
+	}
+
+	&::before {
+		content: '';
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-size: 16px, 16px;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&--rocher {
+		&::before {
+			background-image: url('../img/icons/light/yves-rocher.png');
+		}
+	}
+
+	&--roche {
+		&::before {
+			background-image: url('../img/icons/light/la-roche-posay.png');
+		}
+	}
+
+	&--example {
+		&::before {
+			background-image: url('../img/icons/light/example.png');
+		}
+	}
+}
+
+.all-stores__title-icon {
+	margin: 0 10px;
+}

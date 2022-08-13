@@ -1,0 +1,53 @@
+.dynamics {
+	margin-top: 21px;
+  padding-top: 21px;
+  border-top: 1px solid $black-color;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+.dynamics__title {
+	@include h4;
+	font-size: 14px;
+	margin: 0 0 11px 0;
+}
+
+.dynamics__diagram {
+	display: flex;
+	align-items: center;
+	height: 95px;
+	margin: 0 0 8px 0;
+	// background-color: #eee;
+	border: 1px dashed $transparent;
+
+	&--no-graph {
+		border-color: $black-color;
+	}
+}
+
+.dynamics__information {
+	@include h4;
+	font-size: 14px;
+	padding: 0 71px;
+	margin: 0;
+	text-align: center;
+}
+
+.dynamics__notify {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dynamics__buy {
+	@include h3;
+	font-size: 16px;
+	padding: 5px 18px;
+	border: none;
+	border-radius: 4px;
+	background-color: $transparent;
+	text-transform: uppercase;
+	cursor: pointer;
+}

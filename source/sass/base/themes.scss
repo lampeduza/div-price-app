@@ -1,0 +1,41 @@
+$themes: (
+	"--light": (
+		background-ext: #f9f9f9,
+		primary: #3cbc80,
+		primary-text: #2d2e33,
+		primary-icon: #2d2e33,
+		utility-line: rgba(45, 46, 51, 0.1),
+		card: #ffffff,
+		secondary: rgba(60, 188, 128, 0.25),
+		secondary-text: #9698a3,
+		secondary-icon: #9698a3,
+		utility-selection: rgba(45, 46, 51, 0.05),
+		inactive-text: rgba(45, 46, 51, 0.2),
+		inactive-icon: rgba(45, 46, 51, 0.2),
+		inactive-utility: rgba(45, 46, 51, 0.1)
+	),
+	"--dark": (
+		background-ext: linear-gradient(128.69deg, #2D2E33 1%, #222529 100%),
+		primary: #70f0b4,
+		primary-text: #ffffff,
+		primary-icon: #f7f8f9,
+		utility-line: rgba(255, 255, 255, 0.1),
+		card: linear-gradient(128.69deg, #38393E 1%, #2C2F33 100%),
+		secondary: rgba(112, 240, 180, 0.25),
+		secondary-text: #9698a3,
+		secondary-icon: #9698a3,
+		utility-selection: rgba(255, 255, 255, 0.05),
+		inactive-text: #25282d,
+		inactive-icon: #25282d,
+		inactive-utility: rgba(150, 152, 163, 0.25)
+	)
+);
+
+@each $theme-name, $properties in $themes {
+  .app#{$theme-name} {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}

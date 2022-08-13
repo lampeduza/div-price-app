@@ -1,0 +1,24 @@
+.label {
+	@include h4;
+	font-size: 14px;
+	padding: 0 0 0 26px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		background-repeat: no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 2px;
+	}
+
+	&::before {
+		width: 14px;
+		height: 14px;
+		background-image: url('../img/icons/light/green-circle.svg');
+	}
+}

@@ -1,0 +1,293 @@
+.account {
+	width: 1068px;
+	height: 458px;
+	background: linear-gradient(135deg, rgba(112, 240, 180, 0.4) 14.06%, rgba(83, 189, 246, 0.4) 59.9%, rgba(83, 129, 227, 0.4) 100%);
+	box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(40px);
+	border-radius: 4px;
+	margin: 150px 0;
+
+	position: relative;
+
+	&--sign {
+		.account__container {
+			padding: 141px 682px 199px 42px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+		}
+
+		.account__create {
+			top: -30px;
+			right: 67px;
+			left: auto;
+			height: 517px;
+		}
+
+		.account__set {
+			margin-bottom: 27px;
+		}
+	}
+}
+
+.account__container {
+	padding: 141px 86px 199px 723px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.account__title {
+	color: #ffffff;
+	font-size: 32px;
+	line-height: 20px;
+	font-weight: $semibold;
+	margin: 0 0 58px 0;
+}
+
+.account__sign-in {
+	@include h3;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+	background-color: #ffffff;
+	color: rgba(83, 129, 227, 0.4);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.account__create {
+	width: 574px;
+	height: 700px;
+	position: absolute;
+	top: -121px;
+	left: 67px;
+	border-radius: 8px;
+	display: none;
+
+	&--opened {
+		display: block;
+	}
+}
+
+.account__create-container {
+	// padding: 50px 36px 50px 36px;
+	padding: 50px;
+	display: none;
+	flex-direction: column;
+
+	&--opened {
+		display: flex;
+	}
+}
+
+.account__create-title {
+	margin: 0 0 50px 0;
+	font-size: 24px;
+	line-height: 20px;
+	align-self: center;
+}
+
+.account__close {
+	display: flex;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background-color: $transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.account__form {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 40px;
+}
+
+.account__set {
+	border: none;
+	padding: 0;
+	margin-bottom: 17px;
+}
+
+.account__set-list {
+	@include reset-list;
+}
+
+.account__set-item {
+	margin: 0 0 20px 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.account__set-input {
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 4px;
+}
+
+.account__criteries {
+	@include reset-list;
+	margin: 0 0 25px 0;
+}
+
+.account__criteries-item {
+	@include h5;
+	font-size: 13px;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 9px;
+	position: relative;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	&::before {
+		content: '';
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+}
+
+.account__policy-list {
+	@include reset-list;
+	margin: 0 0 30px 0;
+}
+
+.account__policy-item {
+	margin: 0 0 10px 0;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	.account__policy-link {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			left: 0;
+    	bottom: 0;
+		}
+	}
+
+	.dynamics__notify-label {
+		@include h5;
+		font-size: 13px;
+		display: block;
+
+		&::before {
+			top: 8px;
+			left: 0;
+		}
+	}
+
+	.dynamics__notify-input {
+		&:checked {
+			~ .dynamics__notify-label {
+				&::after {
+					left: 4px;
+				}
+			}
+		}
+	}
+}
+
+.account__agree {
+	@include h3;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.account__decor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 40px 0;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		width: 218px;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+}
+
+.account__social {
+	width: 224px;
+	@include reset-list;
+	display: flex;
+	margin: 0 auto;
+}
+
+.account__social-item {
+	flex-shrink: 0;
+	margin: 0 40px 0 0;
+	width: 48px;
+	height: 48px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.account__social-link {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 48px;
+		height: 48px;
+		background-size: 48px;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.account__recovery {
+	display: block;
+	text-decoration: none;
+	color: var(--primary);
+	margin-top: 20px;
+	font-size: 13px;
+	line-height: 15px;
+}
